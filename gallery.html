@@ -19,28 +19,31 @@
       font-size: 32px;
     }
 
-    .gallery-flex {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
+    .masonry {
+      column-count: 2;
+      column-gap: 16px;
       padding: 20px;
     }
 
-    .gallery-item {
-      max-width: 250px;
-      flex: 1 1 200px;
+    @media (min-width: 768px) {
+      .masonry {
+        column-count: 3;
+      }
+    }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 16px;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       background-color: #ffe6f0;
     }
 
-    .gallery-item img {
+    .masonry-item img {
       width: 100%;
       height: auto;
       display: block;
-      object-fit: cover;
     }
 
     .spotify-button {
@@ -68,31 +71,16 @@
 
   <h1>ذكرياتنا الحلوة سوا ❤️</h1>
 
-  <div class="gallery-flex">
-    <div class="gallery-item"><img src="img1.jpg" alt="img1"></div>
-    <div class="gallery-item"><img src="img2.jpg" alt="img2"></div>
-    <div class="gallery-item"><img src="img3.jpg" alt="img3"></div>
-    <div class="gallery-item"><img src="img4.jpg" alt="img4"></div>
-    <div class="gallery-item"><img src="img5.jpg" alt="img5"></div>
-    <div class="gallery-item"><img src="img6.jpg" alt="img6"></div>
-    <div class="gallery-item"><img src="img7.jpg" alt="img7"></div>
-    <div class="gallery-item"><img src="img8.jpg" alt="img8"></div>
-    <div class="gallery-item"><img src="img9.jpg" alt="img9"></div>
-    <div class="gallery-item"><img src="img10.jpg" alt="img10"></div>
-    <div class="gallery-item"><img src="img11.jpg" alt="img11"></div>
-    <div class="gallery-item"><img src="img12.jpg" alt="img12"></div>
-    <div class="gallery-item"><img src="img13.jpg" alt="img13"></div>
-    <div class="gallery-item"><img src="img14.jpg" alt="img14"></div>
-    <div class="gallery-item"><img src="img15.jpg" alt="img15"></div>
-    <div class="gallery-item"><img src="img16.jpg" alt="img16"></div>
-    <div class="gallery-item"><img src="img17.jpg" alt="img17"></div>
-    <div class="gallery-item"><img src="img18.jpg" alt="img18"></div>
-    <div class="gallery-item"><img src="img19.jpg" alt="img19"></div>
-    <div class="gallery-item"><img src="img20.jpg" alt="img20"></div>
-    <div class="gallery-item"><img src="img21.jpg" alt="img21"></div>
-    <div class="gallery-item"><img src="img22.jpg" alt="img22"></div>
-    <div class="gallery-item"><img src="img23.jpg" alt="img23"></div>
-    <div class="gallery-item"><img src="img24.jpg" alt="img24"></div>
+  <div class="masonry">
+    <!-- مثال: كل صورة جوا masonry-item -->
+    <div class="masonry-item"><img src="img1.jpg" alt=""></div>
+    <div class="masonry-item"><img src="img2.jpg" alt=""></div>
+    <div class="masonry-item"><img src="img3.jpg" alt=""></div>
+    <div class="masonry-item"><img src="img4.jpg" alt=""></div>
+    <div class="masonry-item"><img src="img5.jpg" alt=""></div>
+    <div class="masonry-item"><img src="img6.jpg" alt=""></div>
+    <!-- كمل لحد -->
+    <div class="masonry-item"><img src="img24.jpg" alt=""></div>
   </div>
 
   <button class="spotify-button" onclick="openSpotify()">جرب اضغط علي كده</button>
