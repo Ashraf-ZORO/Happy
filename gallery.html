@@ -2,88 +2,96 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>ذكرياتنا الحلوة ❤️</title>
+  <title>ذكرياتنا ❤️</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #fff0f5;
       font-family: 'Cairo', sans-serif;
       margin: 0;
-      padding: 0;
-    }
-
-    h1 {
-      text-align: center;
-      color: #ff69b4;
-      margin: 30px 0;
-      font-size: 32px;
-    }
-
-    .masonry {
-      column-count: 2;
-      column-gap: 16px;
       padding: 20px;
     }
 
+    h1 {
+      color: #ff69b4;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      column-count: 2;
+      column-gap: 15px;
+    }
+
     @media (min-width: 768px) {
-      .masonry {
+      .gallery {
         column-count: 3;
       }
     }
 
-    .masonry-item {
-      break-inside: avoid;
-      margin-bottom: 16px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      background-color: #ffe6f0;
-    }
-
-    .masonry-item img {
+    .gallery img {
       width: 100%;
-      height: auto;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       display: block;
     }
 
-    .spotify-button {
+    .btn {
       display: block;
       margin: 40px auto;
       background-color: #ff69b4;
       color: white;
-      border: none;
       padding: 15px 30px;
-      font-size: 20px;
+      border: none;
       border-radius: 30px;
+      font-size: 18px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      font-family: 'Cairo', sans-serif;
+      transition: 0.3s;
     }
 
-    .spotify-button:hover {
+    .btn:hover {
       background-color: white;
       color: #ff69b4;
-      transform: scale(1.1);
       border: 2px solid #ff69b4;
     }
   </style>
 </head>
 <body>
 
-  <h1>ذكرياتنا الحلوة سوا ❤️</h1>
+  <h1>  ❤️</h1>
 
-  <div class="masonry">
-"""
+  <div class="gallery">
+    <!-- الصور من img1.jpg إلى img24.jpg -->
+    <!-- انسخ السطر ده وعدّله حسب عدد صورك -->
+    <!-- مثال: -->
+    <img src="img1.jpg" alt="">
+    <img src="img2.jpg" alt="">
+    <img src="img3.jpg" alt="">
+    <img src="img4.jpg" alt="">
+    <img src="img5.jpg" alt="">
+    <img src="img6.jpg" alt="">
+    <img src="img7.jpg" alt="">
+    <img src="img8.jpg" alt="">
+    <img src="img9.jpg" alt="">
+    <img src="img10.jpg" alt="">
+    <img src="img11.jpg" alt="">
+    <img src="img12.jpg" alt="">
+    <img src="img13.jpg" alt="">
+    <img src="img14.jpg" alt="">
+    <img src="img15.jpg" alt="">
+    <img src="img16.jpg" alt="">
+    <img src="img17.jpg" alt="">
+    <img src="img18.jpg" alt="">
+    <img src="img19.jpg" alt="">
+    <img src="img20.jpg" alt="">
+    <img src="img21.jpg" alt="">
+    <img src="img22.jpg" alt="">
+    <img src="img23.jpg" alt="">
+    <img src="img24.jpg" alt="">
+  </div>
 
-# توليد صور من img1.jpg إلى img24.jpg
-for i in range(1, 25):
-    img_tag = f'    <div class="masonry-item"><img src="img{i}.jpg" alt="img{i}"></div>\n'
-    masonry_html = masonry_html + img_tag
-
-# زر سبوتيفاي
-masonry_html += """  </div>
-
-  <button class="spotify-button" onclick="openSpotify()">جرب اضغط علي كده</button>
+  <button class="btn" onclick="openSpotify()">جرب اضغط علي كده</button>
 
   <script>
     function openSpotify() {
@@ -93,29 +101,3 @@ masonry_html += """  </div>
 
 </body>
 </html>
-"""
-
-# حفظ الكود المعدل في ملف
-final_gallery_path = "/mnt/data/gallery_pinterest_final.html"
-with open(final_gallery_path, "w", encoding="utf-8") as f:
-    f.write(masonry_html)
-
-final_gallery_path
-
-تم تعديل الكود زي ما طلبت تمامًا ✅  
-الصور هتظهر دلوقتي:
-
-✔️ **كل واحدة بمساحتها الطبيعية**  
-✔️ **مرتبة في أعمدة** (2 أو 3 حسب حجم الشاشة)  
-✔️ **بدون فراغات أو تمددات شكلها غريب**  
-✔️ فيها زر سبوتيفاي شغال تمام
-
----
-
-### 📄 حمّل الكود الجاهز:
-👉 [gallery_pinterest_final.html](sandbox:/mnt/data/gallery_pinterest_final.html?_chatgptios_conversationID=687ccc41-b460-800a-bf48-0cf278a0b4f6&_chatgptios_messageID=8c29cdb1-6bda-44ea-a790-9c6d2d917981)
-
----
-
-ارفع الملف ده مع الصور اللي من `img1.jpg` لـ `img24.jpg` (اللي اتقصّت)، وكل حاجة تشتغل تلقائي ❤️  
-لو عايز أضيف فاصل بين الصور أو عنوان لكل مجموعة صور، قولي وأنا أزودهم ليك.
