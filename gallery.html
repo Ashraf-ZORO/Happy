@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>  ❤️</title>
+  <title>ذكرياتنا الحلوة ❤️</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
     body {
@@ -10,10 +10,10 @@
       font-family: 'Cairo', sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
 
     h1 {
+      text-align: center;
       color: #ff69b4;
       margin: 30px 0;
       font-size: 32px;
@@ -47,6 +47,8 @@
     }
 
     .spotify-button {
+      display: block;
+      margin: 40px auto;
       background-color: #ff69b4;
       color: white;
       border: none;
@@ -56,7 +58,6 @@
       cursor: pointer;
       transition: all 0.3s ease;
       font-family: 'Cairo', sans-serif;
-      margin: 40px auto;
     }
 
     .spotify-button:hover {
@@ -69,19 +70,18 @@
 </head>
 <body>
 
-  <h1> ❤️</h1>
+  <h1>ذكرياتنا الحلوة سوا ❤️</h1>
 
   <div class="masonry">
-    <!-- مثال: كل صورة جوا masonry-item -->
-    <div class="masonry-item"><img src="img1.jpg" alt=""></div>
-    <div class="masonry-item"><img src="img2.jpg" alt=""></div>
-    <div class="masonry-item"><img src="img3.jpg" alt=""></div>
-    <div class="masonry-item"><img src="img4.jpg" alt=""></div>
-    <div class="masonry-item"><img src="img5.jpg" alt=""></div>
-    <div class="masonry-item"><img src="img6.jpg" alt=""></div>
-    <!-- كمل لحد -->
-    <div class="masonry-item"><img src="img24.jpg" alt=""></div>
-  </div>
+"""
+
+# توليد صور من img1.jpg إلى img24.jpg
+for i in range(1, 25):
+    img_tag = f'    <div class="masonry-item"><img src="img{i}.jpg" alt="img{i}"></div>\n'
+    masonry_html = masonry_html + img_tag
+
+# زر سبوتيفاي
+masonry_html += """  </div>
 
   <button class="spotify-button" onclick="openSpotify()">جرب اضغط علي كده</button>
 
@@ -93,3 +93,29 @@
 
 </body>
 </html>
+"""
+
+# حفظ الكود المعدل في ملف
+final_gallery_path = "/mnt/data/gallery_pinterest_final.html"
+with open(final_gallery_path, "w", encoding="utf-8") as f:
+    f.write(masonry_html)
+
+final_gallery_path
+
+تم تعديل الكود زي ما طلبت تمامًا ✅  
+الصور هتظهر دلوقتي:
+
+✔️ **كل واحدة بمساحتها الطبيعية**  
+✔️ **مرتبة في أعمدة** (2 أو 3 حسب حجم الشاشة)  
+✔️ **بدون فراغات أو تمددات شكلها غريب**  
+✔️ فيها زر سبوتيفاي شغال تمام
+
+---
+
+### 📄 حمّل الكود الجاهز:
+👉 [gallery_pinterest_final.html](sandbox:/mnt/data/gallery_pinterest_final.html?_chatgptios_conversationID=687ccc41-b460-800a-bf48-0cf278a0b4f6&_chatgptios_messageID=8c29cdb1-6bda-44ea-a790-9c6d2d917981)
+
+---
+
+ارفع الملف ده مع الصور اللي من `img1.jpg` لـ `img24.jpg` (اللي اتقصّت)، وكل حاجة تشتغل تلقائي ❤️  
+لو عايز أضيف فاصل بين الصور أو عنوان لكل مجموعة صور، قولي وأنا أزودهم ليك.
