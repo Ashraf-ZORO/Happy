@@ -10,11 +10,11 @@
       font-family: 'Cairo', sans-serif;
       margin: 0;
       padding: 20px;
+      text-align: center;
     }
 
     h1 {
       color: #ff69b4;
-      text-align: center;
       margin-bottom: 30px;
       font-size: 32px;
     }
@@ -66,17 +66,6 @@
     .gallery img:nth-of-type(18) { animation-delay: 1.8s; }
     .gallery img:nth-of-type(19) { animation-delay: 1.9s; }
     .gallery img:nth-of-type(20) { animation-delay: 2.0s; }
-    .gallery img:nth-of-type(21) { animation-delay: 2.1s; }
-    .gallery img:nth-of-type(22) { animation-delay: 2.2s; }
-    .gallery img:nth-of-type(23) { animation-delay: 2.3s; }
-    .gallery img:nth-of-type(24) { animation-delay: 2.4s; }
-    .gallery img:nth-of-type(25) { animation-delay: 2.5s; }
-    .gallery img:nth-of-type(26) { animation-delay: 2.6s; }
-    .gallery img:nth-of-type(27) { animation-delay: 2.7s; }
-    .gallery img:nth-of-type(28) { animation-delay: 2.8s; }
-    .gallery img:nth-of-type(29) { animation-delay: 2.9s; }
-    .gallery img:nth-of-type(30) { animation-delay: 3.0s; }
-    .gallery img:nth-of-type(31) { animation-delay: 3.1s; }
 
     @keyframes fadeInUp {
       to {
@@ -85,15 +74,28 @@
       }
     }
 
-    #love-video {
-      display: block;
-      margin: 50px auto;
-      max-width: 90%;
-      max-height: 80vh;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    .btn {
+      background-color: #ff69b4;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      margin: 50px auto 0;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Cairo', sans-serif;
     }
 
+    .btn:hover {
+      background-color: white;
+      color: #ff69b4;
+      border: 2px solid #ff69b4;
+    }
+
+    a {
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -121,24 +123,12 @@
     <img src="img18.jpg" alt="img18">
     <img src="img19.jpg" alt="img19">
     <img src="img20.jpg" alt="img20">
-    <img src="img21.jpg" alt="img21">
-    <img src="img22.jpg" alt="img22">
-    <img src="img23.jpg" alt="img23">
-    <img src="img24.jpg" alt="img24">
-    <img src="img25.jpg" alt="img25">
-    <img src="img26.jpg" alt="img26">
-    <img src="img27.jpg" alt="img27">
-    <img src="img28.jpg" alt="img28">
-    <img src="img29.jpg" alt="img29">
-    <img src="img30.jpg" alt="img30">
-    <img src="img31.jpg" alt="img31">
   </div>
 
-  <!-- الفيديو اللي هتحطه -->
-  <video id="love-video" controls poster="poster.jpg">
-    <source src="video.mp4" type="video/mp4">
-    
-  </video>
+  <!-- زرار بنفس ستايل زرار سبوتيفاي -->
+  <a href="video.html">
+    <button class="btn"> حبيبك بيقولك دوسي هنا</button>
+  </a>
 
 </body>
 </html>
